@@ -1,0 +1,20 @@
+<h1>Liste des visiteurs</h1>
+
+<div>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Discriminator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let livre of Visiteurs">
+          <td>{{livre.id}}</td>
+          <td>{{livre.nom}}</td>
+          <td>{{livre.discriminator}}</td>
+        </tr>
+      </tbody>
+  </table>
+ </div>

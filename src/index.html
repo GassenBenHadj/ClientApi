@@ -2,12 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta charset="utf-8">
   <title>AngularClient</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/params/index-style.css" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signin">Sign in</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownLivre" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Livres</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownLivre">
+            <a class="dropdown-item" href="/books/livres">Livres</a>
+            <a class="dropdown-item" href="/books/livre">Livre</a>
+            <a class="dropdown-item" href="/books/addlivre">Ajout</a>
+            <a class="dropdown-item" href="/books/updatelivre">Mise à jour</a>
+            <a class="dropdown-item" href="/books/deletelivre">Supression</a>
+            <a class="dropdown-item" href="/books/countlivre">Nombre</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownVisiteur" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Visiteurs</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownVisiteur">
+            <a class="dropdown-item" href="/visitors/visiteurs">Visiteurs</a>
+            <a class="dropdown-item" href="/visitors/visiteur">Visiteur</a>
+            <a class="dropdown-item" href="/visitors/addvisiteur">Ajout</a>
+            <a class="dropdown-item" href="/visitors/updatevisiteur">Mise à jour</a>
+            <a class="dropdown-item" href="/visitors/deletevisiteur">Supression</a>
+            <a class="dropdown-item" href="/visitors/countvisiteur">Nombre</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
   <app-root></app-root>
+
+  <script src="assets/JQuery/JQuery.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
