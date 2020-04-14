@@ -1,1 +1,14 @@
-<p>addvisiteur works!</p>
+<div class="mx-auto">
+  <h2>Ajouter un visiteur</h2>
+     <form #livreForm='ngForm' (ngSubmit)='onSubmit()' novalidate>
+          <div class="form-field">
+            <label for='titreLabel'><span class="hidden">Nom</span></label>
+            <input type='text' name='nom' placeholder='Nom'
+            [(ngModel)]='visiteur.nom' >
+          </div>
+          <div><input type='submit' class="btn  btn-info" value="Ajouter un nouveau visiteur">
+          </div>
+          <div><button type="reset" class="btn btn-info">Cancel</button></div>
+    </form>
+
+</div>

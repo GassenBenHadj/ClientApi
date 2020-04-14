@@ -1,1 +1,21 @@
-<p>deletevisiteur works!</p>
+<h1>Liste des visiteurs</h1>
+
+<div>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Discriminator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let visiteur of Visiteurs">
+          <td>{{visiteur.id}}</td>
+          <td>{{visiteur.nom}}</td>
+          <td>{{visiteur.discriminator}}</td>
+          <td><button class='btn btn-info' (click)='erase(visiteur)'>Supprimer</button></td>
+        </tr>
+      </tbody>
+  </table>
+ </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {LivreService} from 'src/app/Services/livre.service';
+import { Livre } from 'src/app/Model/Livre';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,9 @@ export class LivresComponent implements OnInit {
           console.warn("data",result);
           this.Livres = this._service.entityList = result;
         });
+      }
+
+      updateUser(current :Livre){
+        this._service.putEntity(current);
       }
   }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { LivreRoutingModule } from './livre-routing.module';
 
 /*Livre */
@@ -10,6 +10,7 @@ import {AddlivreComponent} from './addlivre/addlivre.component';
 import {UpdatelivreComponent} from './updatelivre/updatelivre.component';
 import { DeletelivreComponent } from './deletelivre/deletelivre.component';
 import {CountlivreComponent} from './countlivre/countlivre.component';
+import {EventEmitterService} from '../Services/event-emitter.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,10 @@ import {CountlivreComponent} from './countlivre/countlivre.component';
   ],
   imports: [
     CommonModule,
-    LivreRoutingModule
-  ]
+    LivreRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers:[EventEmitterService]
 })
 export class LivreModule { }

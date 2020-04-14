@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../general/home/home.component';
 import { VisiteursComponent } from './visiteurs/visiteurs.component';
 import { VisiteurComponent } from './visiteur/visiteur.component';
-import { AddvisiteurComponent } from './addvisiteur/addvisiteur.component';
+import { AddVisiteurComponent } from './addvisiteur/addvisiteur.component';
 import { UpdatevisiteurComponent } from './updatevisiteur/updatevisiteur.component';
 import { DeletevisiteurComponent } from './deletevisiteur/deletevisiteur.component';
 import { CountvisiteurComponent } from './countvisiteur/countvisiteur.component';
@@ -13,7 +13,7 @@ const routes: Routes = [
 {path: '' ,children:[
   {path: 'visiteurs' , component:VisiteursComponent},
   {path: 'visiteur' , component:VisiteurComponent},
-  {path: 'addvisiteur' , component:AddvisiteurComponent},
+  {path: 'addvisiteur' , component:AddVisiteurComponent},
   {path: 'updatevisiteur' , component:UpdatevisiteurComponent},
   {path: 'deletevisiteur', component:DeletevisiteurComponent},
   {path: 'countvisiteur', component:CountvisiteurComponent}

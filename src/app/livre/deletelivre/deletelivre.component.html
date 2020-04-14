@@ -1,1 +1,28 @@
-<p>deletelivre works!</p>
+<div style="text-align:center;">
+  <h1>
+    Liste des livres
+  </h1>
+</div>
+<div>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Titre</th>
+          <th>Prix</th>
+          <th>Taille</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let livre of Livres;let i =index">
+          <td>{{livre.id}}</td>
+          <td>{{livre.titre}}</td>
+          <td>{{livre.prix}}</td>
+          <td>{{livre.taille}}</td>
+          <td><button class="btn btn-info" (click)='erase(livre)'>Supprimer</button></td>
+        </tr>
+      </tbody>
+  </table>
+ </div>
+
+

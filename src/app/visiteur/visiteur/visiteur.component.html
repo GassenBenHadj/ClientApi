@@ -1,1 +1,16 @@
-<p>visiteur works!</p>
+<div style="text-align:center;">
+  <h1>
+    Recherche de visiteur
+  </h1>
+</div>
+
+<div class="ml-5 ml-lg-5">
+  <p>Chercher visiteur en entrant l'identifiant: <input #text type="text" [(ngModel)]='id'
+    (ngModelChange)='getVisiteur()'  required></p>
+</div>
+
+<div class="ml-5 ml-lg-5">
+   <h3>Id: {{visiteur.id}}</h3>
+   <h3>Nom: {{visiteur.nom}}</h3>
+   <h3>Discriminator: {{visiteur.discriminator}}</h3>
+</div>

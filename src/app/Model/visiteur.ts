@@ -1,25 +1,25 @@
 export interface Visiteur {
-  Id: number;
-  Nom: string;
-  Discriminator:string;
+  id: Number;
+  nom: string;
+  discriminator:string;
 
 }
 export interface Moderateur extends Visiteur{
-  Id: number;
-  Nom: string;
-  Discriminator:string;
+  id: Number;
+  nom: string;
+  discriminator:string;
 }
 export interface Auteur extends Visiteur {
-  Id: number;
-  Nom: string;
-  Discriminator:string;
-  Palmares:string;
-  Rang:number;
+  id: Number;
+  nom: string;
+  discriminator:string;
+  palmares:string;
+  pang:Number;
 }
 export interface Utilisateur extends Visiteur{
-  Id: number;
-  Nom: string;
-  Discriminator:string;
-  Profil:string;
-  SessionsParJour:number;
+  id: Number;
+  nom: string;
+  discriminator:string;
+  profil:string;
+  sessionsParJour:Number;
 }

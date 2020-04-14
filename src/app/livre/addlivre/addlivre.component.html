@@ -1,1 +1,24 @@
-<p>addlivre works!</p>
+<div class="mx-auto">
+    <h2>Ajouter un livre</h2>
+       <form #livreForm='ngForm' (ngSubmit)='onSubmit()' novalidate>
+            <div class="form-field">
+              <label for='titreLabel'><span class="hidden">Titre</span></label>
+              <input type='text' name='titre' placeholder='Titre'
+                  [(ngModel)]='livre.titre'>
+            </div>
+            <div class="form-field">
+              <label for='prixLabel'><span class="hidden">Prix</span></label>
+              <input type="text" name='prix'
+               placeholder="Prix" [(ngModel)]='livre.prix'>
+           </div>
+            <div class="form-field">
+              <label for='tailleLabel'><span class="hidden">Taille</span></label>
+              <input type="text" name='taille'   placeholder="Taille"
+                 [(ngModel)]='livre.taille'>
+            </div>
+            <div><input type='submit' class="btn  btn-info" value="Ajouter un nouveau livre">
+            </div>
+            <div><button type="reset" class="btn btn-info">Cancel</button></div>
+      </form>
+
+</div>

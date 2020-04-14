@@ -1,5 +1,5 @@
 import { Injectable, SystemJsNgModuleLoaderConfig, Type } from '@angular/core';
-import {HttpClient,HttpParams} from '@angular/common/http';
+import {HttpClient,HttpParams, HttpHeaders} from '@angular/common/http';
 import {Observable,throwError} from 'rxjs';
 import { Router } from '@angular/router';
 import {catchError} from 'rxjs/operators';
@@ -30,19 +30,34 @@ export class WebapiService<T> {
     this.initUrl();
      return this._http.get<T[]>(this.basicUrl + 'getall');
   }
-  getEntity<T>(id: number): Observable<T>{
+  getEntity<T>(id?: Number): Observable<T>{
+
+    if(id==null) id=1;
     this.initUrl();
     return this._http.get<T>(this.basicUrl + 'find/' + id.toString())
       .pipe(catchError(this.handleError));
   }
   postEntity<T>():Observable<T>{
     this.initUrl();
-    return this._http.post<T>(this.basicUrl + 'add/', this.entity)
+    let header:HttpHeaders =
+     new HttpHeaders().set('Content-Type', 'application/json')
+     .set('accept','application/json');
+    return this._http.post<T>(this.basicUrl + 'add/',{headers:header}, this.entity)
     .pipe(catchError(this.handleError));;
   }
-  putEntity<T>(): Observable<T>{
+  postEntityRawJson<T>(){
+     this.initUrl();
+     let header:HttpHeaders =
+     new HttpHeaders().set('Content-Type', 'application/json')
+     .set('accept','application/json');
+
+     let object = JSON.stringify(this.entity);
+     return this._http.post(this.basicUrl + 'addc/', object,
+     {headers: header});
+}
+  putEntity<T>(item:T): Observable<T>{
     this.initUrl();
-    return this._http.put<T>(this.basicUrl + 'update/', this.entity,{})
+    return this._http.put<T>(this.basicUrl + 'update/', item,{})
     .pipe(catchError(this.handleError));
   }
   deleteEntity<T>(): Observable<T>{

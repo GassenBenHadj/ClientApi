@@ -1,1 +1,18 @@
-<p>livre works!</p>
+<div style="text-align:center;">
+  <h1>
+    Recherche de livre
+  </h1>
+</div>
+
+<div class="ml-5 ml-lg-5">
+  <p>Chercher livre en entrant l'identifiant: <input #text type="text" [(ngModel)]='id'
+    (ngModelChange)='getLivre()'  required></p>
+</div>
+
+<div class="ml-5 ml-lg-5">
+   <h3>Id: {{livre.id}}</h3>
+   <h3>Titre: {{livre.titre}}</h3>
+   <h3>Prix: {{livre.prix}}</h3>
+   <h3>Taille: {{livre.taille}}</h3>
+</div>
+
