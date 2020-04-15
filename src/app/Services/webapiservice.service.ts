@@ -42,7 +42,7 @@ export class WebapiService<T> {
     let header:HttpHeaders =
      new HttpHeaders().set('Content-Type', 'application/json')
      .set('accept','application/json');
-    return this._http.post<T>(this.basicUrl + 'add/',{headers:header}, this.entity)
+    return this._http.post<T>(this.basicUrl + 'add/', this.entity,{headers:header})
     .pipe(catchError(this.handleError));;
   }
   postEntityRawJson<T>(){
