@@ -5,8 +5,11 @@
 </div>
 
 <div class="ml-5 ml-lg-5">
-  <p>Chercher livre en entrant l'identifiant: <input #text type="text" [(ngModel)]='id'
-    (ngModelChange)='getLivre()'  required></p>
+  <p>Chercher livre en entrant l'identifiant: <input #text type="text"
+
+    (keyup)='updateId(livre.id)'
+    [(ngModel)]='id'
+    (ngModelChange)='getLivre()' required></p>
 </div>
 
 <div class="ml-5 ml-lg-5">

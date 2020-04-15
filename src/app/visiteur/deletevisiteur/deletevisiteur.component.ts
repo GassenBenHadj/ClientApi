@@ -27,6 +27,7 @@ export class DeletevisiteurComponent implements OnInit {
     }
 
     erase(visiteur:Visiteur){
+      alert("Vous ête sûr de bien vouloir supprimer le visiteur!!!");
        this._service.entity = visiteur;
        this._service.deleteEntity().subscribe(
          result =>{

@@ -30,11 +30,11 @@ export class WebapiService<T> {
     this.initUrl();
      return this._http.get<T[]>(this.basicUrl + 'getall');
   }
-  getEntity<T>(id?: Number): Observable<T>{
+  getEntity<T>(id?: Number):Observable<T>{
 
     if(id==null) id=1;
     this.initUrl();
-    return this._http.get<T>(this.basicUrl + 'find/' + id.toString())
+     return this._http.get<T>(this.basicUrl + 'find/' + id.toString())
       .pipe(catchError(this.handleError));
   }
   postEntity<T>():Observable<T>{

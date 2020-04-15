@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Injectable,Input } from '@angular/core';
 import {LivreService} from 'src/app/Services/livre.service';
 import { Livre } from 'src/app/Model/Livre';
 
@@ -14,6 +13,8 @@ import { Livre } from 'src/app/Model/Livre';
   styleUrls: ['./deletelivre.component.css']
 })
 export class DeletelivreComponent implements OnInit {
+  @Input()id:Number;
+  livre :Livre;
   Livres : {};
   constructor(private _service:LivreService)
    {console.log('Debut du lancement du composant'); }
@@ -27,17 +28,16 @@ export class DeletelivreComponent implements OnInit {
       });
     }
 
-    updateUser(current :Livre){
-      this._service.putEntity(current);
+    erase(livre:Livre)
+    {
+      alert("Vous ête sûr de bien vouloir supprimer le livre!!!");
+      this._service.entity = livre;
+      this._service.deleteEntity().subscribe(
+        result =>{
+          console.log('Visiteur supprimé')
+        }
+      );
     }
 
 
-    erase(livre:Livre){
-       this._service.entity = livre;
-       this._service.deleteEntity().subscribe(
-         result => {
-           console.log('Element supprimé');
-         }
-       );
-    }
 }

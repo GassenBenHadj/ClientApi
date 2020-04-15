@@ -26,7 +26,4 @@ export class LivresComponent implements OnInit {
         });
       }
 
-      updateUser(current :Livre){
-        this._service.putEntity(current);
-      }
   }

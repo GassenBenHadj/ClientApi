@@ -1,7 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Injectable } from '@angular/core';
 import {Livre} from 'src/app/Model/Livre';
 import { LivreService } from 'src/app/Services/livre.service';
 
+@Injectable({
+  providedIn: 'root'
+})
 
 @Component({
   selector: 'app-livre',
